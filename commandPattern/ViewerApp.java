@@ -84,10 +84,16 @@ public class ViewerApp {
                     case "1":
                         TurnOn turnOn = new TurnOn(myDevice);
                         System.out.println(turnOn.execute());
+                        if (choice.equals("Light")) {
+                            System.out.println("\nBrightness has been turned up");
+                        }
                         break;
                     case "2":
                         TurnOff turnOff = new TurnOff(myDevice);
                         System.out.println(turnOff.execute());
+                        if (choice.equals("Light")) {
+                            System.out.println("\nBrightness has been turned down");
+                        }
                         break;
                     case "3":
                         IncreaseTemperature increaseTemperature = new IncreaseTemperature(myDevice);
@@ -102,6 +108,11 @@ public class ViewerApp {
                         System.out.println(increaseVolume.execute());
                         if (choice.equals("Music Player")) {
                             System.out.println("\nMusic volume has turned up");
+                            System.out.println("\nNow playing a new song. Playlist:");
+                            System.out.println("1. ikaw lang - kiyo");
+                            System.out.println("2. saan? - maki");
+                            System.out.println("3. sinta - Rob Deniel");
+
                         }
                         break;
                     case "6":
